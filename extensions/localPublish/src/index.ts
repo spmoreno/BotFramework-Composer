@@ -300,7 +300,7 @@ class LocalPublisher implements PublishPlugin<PublishConfig> {
       let skillHostEndpoint;
       if (isSkillHostUpdateRequired(settings?.skillHostEndpoint)) {
         // Update skillhost endpoint only if ngrok url not set meaning empty or localhost url
-        skillHostEndpoint = `http://127.0.0.1:${port}/api/skills`;
+        skillHostEndpoint = `https://bfc.azuresandbox.labsbch.cl:${port}/api/skills`;
       }
       config = this.getConfig(settings, skillHostEndpoint);
       let spawnProcess;
